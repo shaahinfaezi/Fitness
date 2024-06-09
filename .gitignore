@@ -1,0 +1,14 @@
+DB/data/db/
+DB/data/db/journal/WiredTigerLog.0000000001
+DB/data/db/WiredTiger.wt
+DB/data/db/WiredTiger.turtle
+DB/data/db/WiredTiger.lock
+DB/data/db/WiredTiger
+DB/data/db/sizeStorer.wt
+DB/data/db/mongod.lock
+DB/data/db/_mdb_catalog.wt
+DB/data/db/mongod.lock
+DB/data/db/sizeStorer.wt
+DB/data/db/WiredTiger
+DB/data/db/WiredTiger.lock
+DB/data/db/WiredTiger.wt
