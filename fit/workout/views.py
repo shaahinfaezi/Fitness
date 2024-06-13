@@ -3,13 +3,12 @@ from .models import *
 from django.http import HttpResponse
 # Create your views here.
 
-def addWorkout(request):
-    desc={
-        "description":"3*15 squat"
-        }
-    Workout_Plan.insert_one(desc)
-    return HttpResponse('added')
+def index(request):
+    return render(request,"index.html",{})
+def about(request):
+    return render(request,"about.html",{})
+def contact(request):
+    return render(request,"contact.html",{})
 
-def getWorkouts(request):
-    workouts=Workout_Plan.find()
-    return HttpResponse(workouts)
+
+
