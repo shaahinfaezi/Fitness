@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Contact - Fitnesso Webflow Ecommerce website template</title>
+    <title>Contact - Pulse Gym</title>
     <meta
         content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
         name="description" />
@@ -73,12 +73,13 @@
                     </div>
                     <div id="w-node-aa2731c4-ac7b-fa72-caa7-5b2b0a16254a-33f6c030" class="contact-form w-form">
                         <form id="wf-form-Workout-Form" name="wf-form-Workout-Form" data-name="Workout Form"
-                            method="get" class="form-content" data-wf-page-id="6666ad932711eb3d33f6c030"
-                            data-wf-element-id="aa2731c4-ac7b-fa72-caa7-5b2b0a16254b">
+                            method="post" class="form-content" data-wf-page-id="6666ad932711eb3d33f6c030"
+                            data-wf-element-id="aa2731c4-ac7b-fa72-caa7-5b2b0a16254b" action="#">
+                            {% csrf_token %}
                             <div class="contact-form-grid"><input
                                     class="form-field w-node-aa2731c4-ac7b-fa72-caa7-5b2b0a162551-33f6c030 w-input"
                                     maxlength="256" name="Muscle-Group" data-name="Muscle Group"
-                                    placeholder="Muscle Group" type="text" id="Muscle-Group" required="" />
+                                    placeholder="Muscle-Group" type="text" id="Muscle-Group" required="" />
                                 <div class="select-block"><select id="field" name="field" data-name="Field" required=""
                                         class="select-field w-node-_087e9477-8f88-ff08-76d6-de568f3ef617-33f6c030 w-select">
                                         <option value="">Year</option>
