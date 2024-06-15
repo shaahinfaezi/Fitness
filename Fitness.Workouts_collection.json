@@ -1,0 +1,240 @@
+[{
+  "_id": {
+    "$oid": "666d825505f5d8b0e630d55a"
+  },
+  "Muscle_Group": "Back",
+  "Name1": "Close Grip Seated Cable Row",
+  "Name2": "Underhand Grip Bent Row",
+  "Name3": "Stiff Arm Pull Down",
+  "Name4": "Close Grip Pull Down",
+  "Name5": "Smith Machine BTN Press",
+  "Sets1": "3*15",
+  "Sets2": "3*12",
+  "Sets3": "3*8",
+  "Sets4": "3*10",
+  "Sets5": "3*15"
+},
+{
+  "_id": {
+    "$oid": "666d829e05f5d8b0e630d55b"
+  },
+  "Muscle_Group": "Back",
+  "Name1": "Seated Pullover Machine",
+  "Name2": "Underhand Grip Pull Down",
+  "Name3": "Underhand Grip Seated Cable Row",
+  "Name4": "One Arm Dumbbell Row",
+  "Name5": "Seated Side Lateral Machine",
+  "Sets1": "3*12",
+  "Sets2": "3*10",
+  "Sets3": "4*15",
+  "Sets4": "4*10",
+  "Sets5": "3*12"
+},
+{
+  "_id": {
+    "$oid": "666d82d505f5d8b0e630d55c"
+  },
+  "Muscle_Group": "Back",
+  "Name1": "Dumbbell Pullover",
+  "Name2": "Close Grip T-Bar Row",
+  "Name3": "Close Grip Seated Hammer Row",
+  "Name4": "Underhand Grip Smith Row",
+  "Name5": "Incline Dumbbell Lateral Raise",
+  "Sets1": "4*12",
+  "Sets2": "3*10",
+  "Sets3": "3*15",
+  "Sets4": "4*12",
+  "Sets5": "3*15"
+},
+{
+  "_id": {
+    "$oid": "666d836405f5d8b0e630d55d"
+  },
+  "Muscle_Group": "Arm",
+  "Name1": "Standing Barbell Curl",
+  "Name2": "Overhead Lat Pull Down Curl",
+  "Name3": "Barbell Preacher Curl",
+  "Name4": "Reverse Barbell Curl",
+  "Name5": "Skullcrusher",
+  "Sets1": "3*12",
+  "Sets2": "3*10",
+  "Sets3": "3*15",
+  "Sets4": "3*12",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d838f05f5d8b0e630d55e"
+  },
+  "Muscle_Group": "Arm",
+  "Name1": "Cable Rope Hammer Curl",
+  "Name2": "90 Degree Side Barbell Preacher Curl",
+  "Name3": "Standing Alternating Dumbbell Curl",
+  "Name4": "Lying Low Cable Curl",
+  "Name5": "Reverse Grip Pushdown",
+  "Sets1": "4*15",
+  "Sets2": "3*12",
+  "Sets3": "4*15",
+  "Sets4": "3*12",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d83c305f5d8b0e630d55f"
+  },
+  "Muscle_Group": "Arm",
+  "Name1": "Incline Elbows Out Dumbbell Curl",
+  "Name2": "Straight Bar Low Cable Curl",
+  "Name3": "EZ Bar Curl",
+  "Name4": "Front Double Biceps Pose Upper Cable Curl",
+  "Name5": "Bent Overhead Cable V-Bar Extension",
+  "Sets1": "3*12",
+  "Sets2": "3*12",
+  "Sets3": "4*12",
+  "Sets4": "4*12",
+  "Sets5": "4*15"
+},
+{
+  "_id": {
+    "$oid": "666d844905f5d8b0e630d560"
+  },
+  "Muscle_Group": "Leg",
+  "Name1": "Single Leg Curl",
+  "Name2": "Stiff-Legged Deadlift",
+  "Name3": "Banded Good Mornings",
+  "Name4": "Adductor Machine",
+  "Name5": "Abductor Machine",
+  "Sets1": "4*15",
+  "Sets2": "3*12",
+  "Sets3": "4*15",
+  "Sets4": "3*12",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d848b05f5d8b0e630d561"
+  },
+  "Muscle_Group": "Leg",
+  "Name1": "Single Leg Extension",
+  "Name2": "Front Squat",
+  "Name3": "Hack Squat",
+  "Name4": "Barbell Hip Thrust",
+  "Name5": "Lying Leg Curl",
+  "Sets1": "3*15",
+  "Sets2": "3*12",
+  "Sets3": "3*12",
+  "Sets4": "3*15",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d84c905f5d8b0e630d562"
+  },
+  "Muscle_Group": "Leg",
+  "Name1": "Single Leg Press",
+  "Name2": "Pause Squat",
+  "Name3": "Hack Squat",
+  "Name4": "Leg Extension",
+  "Name5": "Lying Leg Curl",
+  "Sets1": "3*15",
+  "Sets2": "3*12",
+  "Sets3": "3*12",
+  "Sets4": "3*15",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d852405f5d8b0e630d563"
+  },
+  "Muscle_Group": "Chest",
+  "Name1": "Flat DB Press",
+  "Name2": "Incline DB Fly",
+  "Name3": "Weighted Dips",
+  "Name4": "Incline Smith Press",
+  "Name5": "Leverage Chest Press",
+  "Sets1": "3*15",
+  "Sets2": "3*12",
+  "Sets3": "3*12",
+  "Sets4": "3*15",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d855b05f5d8b0e630d564"
+  },
+  "Muscle_Group": "Chest",
+  "Name1": "BB Incline Press",
+  "Name2": "Low Cable Crossover",
+  "Name3": "Weighted Dips",
+  "Name4": "Incline DB Fly",
+  "Name5": "Cable Crossover",
+  "Sets1": "4*12",
+  "Sets2": "3*10",
+  "Sets3": "4*12",
+  "Sets4": "3*15",
+  "Sets5": "4*10"
+},
+{
+  "_id": {
+    "$oid": "666d859805f5d8b0e630d565"
+  },
+  "Muscle_Group": "Chest",
+  "Name1": "Bench Press",
+  "Name2": "Flat DB Fly",
+  "Name3": "Hammer Machine Incline Press",
+  "Name4": "Incline DB Fly",
+  "Name5": "Decline DB Press",
+  "Sets1": "4*12",
+  "Sets2": "4*15",
+  "Sets3": "4*12",
+  "Sets4": "3*12",
+  "Sets5": "3*15"
+},
+{
+  "_id": {
+    "$oid": "666d860c05f5d8b0e630d566"
+  },
+  "Muscle_Group": "Shoulder",
+  "Name1": "Seated Dumbbell Lateral Raise",
+  "Name2": "Military Press",
+  "Name3": "Wide Grip Barbell Upright Row",
+  "Name4": "Single Arm Reverse Cable Fly",
+  "Name5": "Incline Dumbbell Side Lateral Raise",
+  "Sets1": "4*12",
+  "Sets2": "4*15",
+  "Sets3": "4*12",
+  "Sets4": "3*12",
+  "Sets5": "3*15"
+},
+{
+  "_id": {
+    "$oid": "666d863805f5d8b0e630d567"
+  },
+  "Muscle_Group": "Shoulder",
+  "Name1": "Seated Dumbbell Lateral Raise",
+  "Name2": "Machine Reverse Fly",
+  "Name3": "Seated Dumbbell Press",
+  "Name4": "Wide Grip Cable Upright Row",
+  "Name5": "Machine Shoulder Press",
+  "Sets1": "3*12",
+  "Sets2": "3*15",
+  "Sets3": "4*10",
+  "Sets4": "3*12",
+  "Sets5": "3*15"
+},
+{
+  "_id": {
+    "$oid": "666d867905f5d8b0e630d568"
+  },
+  "Muscle_Group": "Shoulder",
+  "Name1": "Seated Bent Over Rear Delt Fly",
+  "Name2": "Dumbbell Lateral Raise",
+  "Name3": "Incline Cable Front Raise",
+  "Name4": "Smith Military Press",
+  "Name5": "Single Arm Palm In Seated Machine Press",
+  "Sets1": "4*12",
+  "Sets2": "4*12",
+  "Sets3": "4*15",
+  "Sets4": "4*12",
+  "Sets5": "4*15"
+}]

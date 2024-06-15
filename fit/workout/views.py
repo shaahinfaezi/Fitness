@@ -109,7 +109,7 @@ def back(request):
                 backid+=1
         elif request.POST.get("prev"):
             if backid>0:
-                backd-=1
+                backid-=1
 
 
     Back_workouts=list(Workouts.find({"Muscle_Group":"Back"}))
@@ -229,39 +229,54 @@ def shoulder(request):
         "w5":f"{name5} {sets5}",
              }
 
-    return render(request,"leg.html",dic)
+    return render(request,"shoulder.html",dic)
 def shop(request):
     global id_
     if request.method == "POST":
         if request.POST.get("next"):
-            
             if(id_<Workout_Plan.count_documents({})-1):
                 id_+=1
         elif request.POST.get("prev"):
             if id_>0:
                 id_-=1
 
+    if Stats.count_documents({})==0 :
+        Goal_Weight="0 KG"
+        Current_Weight="0 KG"
+        Squat_PR_Goal="0 KG"
+        Current_squat_PR="0 KG"
+        Bench_PR_Goal="0 KG"
+        Current_bench_PR="0 KG"
+        Deadlift_PR_Goal="0 KG"
+        Current_deadlift_PR="0 KG"
+    else:
+    
+        stats=list(Stats.find({}))
+        stats=stats[0]
+        Goal_Weight=stats["Goal_Weight"]
+        Current_Weight=stats["Current_Weight"]
+        Squat_PR_Goal=stats["Squat_PR_Goal"]
+        Current_squat_PR=stats["Current_squat_PR"]
+        Bench_PR_Goal=stats["Bench_PR_Goal"]
+        Current_bench_PR=stats["Current_bench_PR"]
+        Deadlift_PR_Goal=stats["Deadlift_PR_Goal"]
+        Current_deadlift_PR=stats["Current_deadlift_PR"]
 
-    stats=list(Stats.find({}))
-    stats=stats[0]
-    Goal_Weight=stats["Goal_Weight"]
-    Current_Weight=stats["Current_Weight"]
-    Squat_PR_Goal=stats["Squat_PR_Goal"]
-    Current_squat_PR=stats["Current_squat_PR"]
-    Bench_PR_Goal=stats["Bench_PR_Goal"]
-    Current_bench_PR=stats["Current_bench_PR"]
-    Deadlift_PR_Goal=stats["Deadlift_PR_Goal"]
-    Current_deadlift_PR=stats["Current_deadlift_PR"]
+    if Workout_Plan.count_documents({})==0:
+        Muscle_group="Go to the gym!"
+        Date="0/0/0"
+        Description=""
+    else:
 
-    workouts=Workout_Plan.find().sort( { "Year": 1, "Month": 1 ,"Day": 1} )
-    workouts=list(workouts)
+        workouts=Workout_Plan.find().sort( { "Year": 1, "Month": 1 ,"Day": 1} )
+        workouts=list(workouts)
 
-    Muscle_group=workouts[id_]["Muscle_group"]
-    Year=workouts[id_]["Year"]
-    Month=workouts[id_]["Month"]
-    Day=workouts[id_]["Day"]
-    Date=f"{Month}/{Day}/{Year}"
-    Description=workouts[id_]["Description"]
+        Muscle_group=workouts[id_]["Muscle_group"]
+        Year=workouts[id_]["Year"]
+        Month=workouts[id_]["Month"]
+        Day=workouts[id_]["Day"]
+        Date=f"{Month}/{Day}/{Year}"
+        Description=workouts[id_]["Description"]
     
 
     dic={
