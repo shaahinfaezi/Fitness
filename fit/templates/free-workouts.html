@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Jun 13 2024 15:29:09 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="fitness-147f6e.webflow.io" data-wf-page="6666ad932711eb3d33f6c03d"
+<html data-wf-domain="fitness-147f6e.webflow.io" data-wf-page="6666ad932711eb3d33f6c038"
     data-wf-site="6666ad932711eb3d33f6bfea" lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Shop - Pulse Gym</title>
+    <title>Free Workouts - Fitnesso Webflow Ecommerce website template</title>
     <meta
         content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
         name="description" />
-    <meta content="Shop - Fitnesso Webflow Ecommerce website template" property="og:title" />
+    <meta content="Free Workouts - Fitnesso Webflow Ecommerce website template" property="og:title" />
     <meta
         content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
         property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/5e80894f63c557e083ed96b4/5e847eb601432651ddc2075e_Fitness%20Open%20Graph%20(1).png"
         property="og:image" />
-    <meta content="Shop - Fitnesso Webflow Ecommerce website template" property="twitter:title" />
+    <meta content="Free Workouts - Fitnesso Webflow Ecommerce website template" property="twitter:title" />
     <meta
         content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
         property="twitter:description" />
@@ -28,7 +28,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     {% load static %}
-    <link href="{% static 'shop.css' %}"
+    <link href="{% static 'free-workouts.css' %}"
         rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -54,8 +54,8 @@
                         alt="" class="brand-logo" /></a>
                 <div class="nav-right-wrap">
                     <nav role="navigation" class="nav-menu w-nav-menu"><a href="/about"
-                            class="nav-link w-nav-link">progress menu</a><a href="/free-workouts"
-                            class="nav-link w-nav-link">Free Workouts</a></nav>
+                            class="nav-link w-nav-link">progress menu</a><a href="/free-workouts" aria-current="page"
+                            class="nav-link w-nav-link w--current">Free Workouts</a></nav>
                     <div class="menu-button w-nav-button">
                         <div class="w-icon-nav-menu"></div>
                     </div>
@@ -65,80 +65,111 @@
         <div class="section free-w-hero">
             <div class="container flex-center">
                 <div class="hero-image-mask"><img
-                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash.jpg"
-                        sizes="95vw"
-                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-500.jpeg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-800.jpeg 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-2000.jpeg 2000w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash.jpg 2067w"
-                        alt="" class="hero-image" /><img
+                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0ce_kelly-sikkema-IZOAOjvwhaM-unsplash.jpg"
+                        alt="" sizes="95vw"
+                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0ce_kelly-sikkema-IZOAOjvwhaM-unsplash-p-500.jpeg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0ce_kelly-sikkema-IZOAOjvwhaM-unsplash-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0ce_kelly-sikkema-IZOAOjvwhaM-unsplash-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0ce_kelly-sikkema-IZOAOjvwhaM-unsplash-p-2000.jpeg 2000w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0ce_kelly-sikkema-IZOAOjvwhaM-unsplash.jpg 2314w"
+                        class="hero-image" /><img
                         src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0f5_Group%20117.svg"
                         alt="" class="free-workout-shape" /></div>
-                <div class="hero-line shop-line">
-                    <h1 class="no-margin">See Your progress here</h1>
+                <div class="hero-line">
+                    <h1 class="no-margin">Free workouts</h1>
                 </div>
             </div>
-        </div>
-        <div class="div-block-7">
-            <div class="div-block-3">
-                <div class="div-block-4">
-                    <div class="text-block-4">Goal Weight: </div>
-                    <div class="text-block-7">{{Goal_Weight}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current Weight: </div>
-                    <div class="text-block-8">{{Current_Weight}}</div>
-                </div>
-            </div>
-            <div class="div-block-6">
-                <div class="div-block-4">
-                    <div class="text-block-4">Squat PR Goal:</div>
-                    <div class="text-block-7">{{Squat_PR_Goal}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current squat PR: </div>
-                    <div class="text-block-8">{{Current_squat_PR}}</div>
-                </div>
-            </div>
-            <div class="div-bech">
-                <div class="div-block-4">
-                    <div class="text-block-4">Bench PR goal:</div>
-                    <div class="text-block-7">{{Bench_PR_Goal}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current Bench PR: </div>
-                    <div class="text-block-8">{{Current_bench_PR}}</div>
-                </div>
-            </div>
-            <div class="div-deadlif">
-                <div class="div-block-4">
-                    <div class="text-block-4">Deadlift PR Goal: </div>
-                    <div class="text-block-7">{{Deadlift_PR_Goal}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current Deadlift PR: </div>
-                    <div class="text-block-8">{{Current_deadlift_PR}}</div>
-                </div>
-            </div>
-        </div>
-        <div class="div-block-8">
-            <h1 class="heading-3">Workouts log:</h1>
-            <div class="div-block-16">
-                <div class="div-block-17">
-                    <div class="skibidi">muscle group: </div>
-                    <div class="skibidi">{{Muscle_group}}</div>
-                    <div class="skibidi">date: </div>
-                    <div class="skibidi">{{Date}}</div>
-                </div>
-                <div class="div-block-18">
-                    <div class="skibidi">Description: </div>
-                    <div class="skibidi">{{Description}}</div>
-                </div>
-                <div class="div-block-19">
-                    <form action="" method="post">
-                    {% csrf_token %}
-                    <input type="submit" name="prev" class="log-nav-button w-button" value="←"/>
-                    <input type="submit" name="next"
-                        class="log-nav-button w-button" value="→"/>
-                    </form>
+            <div class="container free-plan-container">
+                <div class="products-list-wrapper w-dyn-list">
+                    <div role="list" class="product-list w-dyn-items">
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/back"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef6735885049c7a64988_Back-muscles.webp"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef6735885049c7a64988_Back-muscles-p-500.webp 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef6735885049c7a64988_Back-muscles-p-800.webp 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef6735885049c7a64988_Back-muscles-p-1080.webp 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef6735885049c7a64988_Back-muscles.webp 1600w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Back</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/arm"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms.webp"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms-p-500.webp 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms-p-800.webp 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms.webp 1000w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Arm</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/shoulder"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises.jpg"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises-p-500.jpg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises.jpg 629w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Shoulder</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/leg-day"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout.webp"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-500.webp 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-800.webp 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-1080.webp 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-1600.webp 1600w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout.webp 1988w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Leg Day</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/chest-day"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666e95448f733baeb82dd50_The-best-chest-exercises.jpg"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666e95448f733baeb82dd50_The-best-chest-exercises-p-500.jpg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666e95448f733baeb82dd50_The-best-chest-exercises.jpg 720w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Chest Day</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
                     </div>
+                </div>
             </div>
         </div>
         <div data-w-id="417cd7da-3e29-9aa3-1365-ee8b75b4dc84" class="section footer-insta">
@@ -210,7 +241,7 @@
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
     {% load static %}
-    <script src="{% static 'shop.js' %}"
+    <script src="{% static 'free-workouts.js' %}"
         type="text/javascript"></script>
     <style>
         body {

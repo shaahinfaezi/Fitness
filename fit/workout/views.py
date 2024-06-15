@@ -5,12 +5,236 @@ from bson.objectid import ObjectId
 # Create your views here.
 id_=0
 
+armid=0
+backid=0
+legid=0
+shoulderid=0
+chestid=0
+
 def index(request):
     return render(request,"index.html",{})
-def shop(request):
-
+def free_workouts(request):
+    return render(request,"free-workouts.html",{})
+def arm(request):
+    global armid
     if request.method == "POST":
         if request.POST.get("next"):
+            if(armid<Workouts.count_documents({"Muscle_Group":"Arm"})-1):
+                armid+=1
+        elif request.POST.get("prev"):
+            if armid>0:
+                armid-=1
+
+
+    Arm_workouts=list(Workouts.find({"Muscle_Group":"Arm"}))
+    
+    name1=Arm_workouts[armid]["Name1"]
+
+    name2=Arm_workouts[armid]["Name2"]
+
+    name3=Arm_workouts[armid]["Name3"]
+
+    name4=Arm_workouts[armid]["Name4"]
+
+    name5=Arm_workouts[armid]["Name5"]
+
+    sets1=Arm_workouts[armid]["Sets1"]
+
+    sets2=Arm_workouts[armid]["Sets2"]
+
+    sets3=Arm_workouts[armid]["Sets3"]
+
+    sets4=Arm_workouts[armid]["Sets4"]
+
+    sets5=Arm_workouts[armid]["Sets5"]
+    
+
+    dic={
+        "w1":f"{name1} {sets1}",
+        "w2":f"{name2} {sets2}",
+        "w3":f"{name3} {sets3}",
+        "w4":f"{name4} {sets4}",
+        "w5":f"{name5} {sets5}",
+             }
+
+    return render(request,"arm.html",dic)
+def chest(request):
+    global chestid
+    if request.method == "POST":
+        if request.POST.get("next"):
+            if(chestid<Workouts.count_documents({"Muscle_Group":"Chest"})-1):
+                chestid+=1
+        elif request.POST.get("prev"):
+            if chestid>0:
+                chestid-=1
+
+
+    Chest_workouts=list(Workouts.find({"Muscle_Group":"Chest"}))
+    
+    name1=Chest_workouts[armid]["Name1"]
+
+    name2=Chest_workouts[armid]["Name2"]
+
+    name3=Chest_workouts[armid]["Name3"]
+
+    name4=Chest_workouts[armid]["Name4"]
+
+    name5=Chest_workouts[armid]["Name5"]
+
+    sets1=Chest_workouts[armid]["Sets1"]
+
+    sets2=Chest_workouts[armid]["Sets2"]
+
+    sets3=Chest_workouts[armid]["Sets3"]
+
+    sets4=Chest_workouts[armid]["Sets4"]
+
+    sets5=Chest_workouts[armid]["Sets5"]
+    
+
+    dic={
+        "w1":f"{name1} {sets1}",
+        "w2":f"{name2} {sets2}",
+        "w3":f"{name3} {sets3}",
+        "w4":f"{name4} {sets4}",
+        "w5":f"{name5} {sets5}",
+             }
+
+    return render(request,"chest.html",dic)
+def back(request):
+    global backid
+    if request.method == "POST":
+        if request.POST.get("next"):
+            if(backid<Workouts.count_documents({"Muscle_Group":"Back"})-1):
+                backid+=1
+        elif request.POST.get("prev"):
+            if backid>0:
+                backd-=1
+
+
+    Back_workouts=list(Workouts.find({"Muscle_Group":"Back"}))
+    
+    name1=Back_workouts[armid]["Name1"]
+
+    name2=Back_workouts[armid]["Name2"]
+
+    name3=Back_workouts[armid]["Name3"]
+
+    name4=Back_workouts[armid]["Name4"]
+
+    name5=Back_workouts[armid]["Name5"]
+
+    sets1=Back_workouts[armid]["Sets1"]
+
+    sets2=Back_workouts[armid]["Sets2"]
+
+    sets3=Back_workouts[armid]["Sets3"]
+
+    sets4=Back_workouts[armid]["Sets4"]
+
+    sets5=Back_workouts[armid]["Sets5"]
+    
+
+    dic={
+        "w1":f"{name1} {sets1}",
+        "w2":f"{name2} {sets2}",
+        "w3":f"{name3} {sets3}",
+        "w4":f"{name4} {sets4}",
+        "w5":f"{name5} {sets5}",
+             }
+
+    return render(request,"back.html",dic)
+def leg(request):
+    global legid
+    if request.method == "POST":
+        if request.POST.get("next"):
+            if(legid<Workouts.count_documents({"Muscle_Group":"Leg"})-1):
+                legid+=1
+        elif request.POST.get("prev"):
+            if legid>0:
+                legid-=1
+
+
+    Leg_workouts=list(Workouts.find({"Muscle_Group":"Leg"}))
+    
+    name1=Leg_workouts[armid]["Name1"]
+
+    name2=Leg_workouts[armid]["Name2"]
+
+    name3=Leg_workouts[armid]["Name3"]
+
+    name4=Leg_workouts[armid]["Name4"]
+
+    name5=Leg_workouts[armid]["Name5"]
+
+    sets1=Leg_workouts[armid]["Sets1"]
+
+    sets2=Leg_workouts[armid]["Sets2"]
+
+    sets3=Leg_workouts[armid]["Sets3"]
+
+    sets4=Leg_workouts[armid]["Sets4"]
+
+    sets5=Leg_workouts[armid]["Sets5"]
+    
+
+    dic={
+        "w1":f"{name1} {sets1}",
+        "w2":f"{name2} {sets2}",
+        "w3":f"{name3} {sets3}",
+        "w4":f"{name4} {sets4}",
+        "w5":f"{name5} {sets5}",
+             }
+
+    return render(request,"leg.html",dic)
+def shoulder(request):
+    global shoulderid
+    if request.method == "POST":
+        if request.POST.get("next"):
+            if(shoulderid<Workouts.count_documents({"Muscle_Group":"Shoulder"})-1):
+                shoulderid+=1
+        elif request.POST.get("prev"):
+            if shoulderid>0:
+                shoulderid-=1
+
+
+    Shoulder_workouts=list(Workouts.find({"Muscle_Group":"Shoulder"}))
+    
+    name1=Shoulder_workouts[armid]["Name1"]
+
+    name2=Shoulder_workouts[armid]["Name2"]
+
+    name3=Shoulder_workouts[armid]["Name3"]
+
+    name4=Shoulder_workouts[armid]["Name4"]
+
+    name5=Shoulder_workouts[armid]["Name5"]
+
+    sets1=Shoulder_workouts[armid]["Sets1"]
+
+    sets2=Shoulder_workouts[armid]["Sets2"]
+
+    sets3=Shoulder_workouts[armid]["Sets3"]
+
+    sets4=Shoulder_workouts[armid]["Sets4"]
+
+    sets5=Shoulder_workouts[armid]["Sets5"]
+    
+
+    dic={
+        "w1":f"{name1} {sets1}",
+        "w2":f"{name2} {sets2}",
+        "w3":f"{name3} {sets3}",
+        "w4":f"{name4} {sets4}",
+        "w5":f"{name5} {sets5}",
+             }
+
+    return render(request,"leg.html",dic)
+def shop(request):
+    global id_
+    if request.method == "POST":
+        if request.POST.get("next"):
+            
             if(id_<Workout_Plan.count_documents({})-1):
                 id_+=1
         elif request.POST.get("prev"):

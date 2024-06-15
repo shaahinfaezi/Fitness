@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Thu Jun 13 2024 15:29:09 GMT+0000 (Coordinated Universal Time) -->
-<html data-wf-domain="fitness-147f6e.webflow.io" data-wf-page="6666ad932711eb3d33f6c03d"
+<html data-wf-domain="fitness-147f6e.webflow.io" data-wf-page="6666ad932711eb3d33f6c034"
     data-wf-site="6666ad932711eb3d33f6bfea" lang="en">
 
 <head>
     <meta charset="utf-8" />
-    <title>Shop - Pulse Gym</title>
+    <title>Shoulder - Fitnesso Webflow Ecommerce website template</title>
+    <meta content="shoulder" name="description" />
+    <meta content="Shoulder - Fitnesso Webflow Ecommerce website template" property="og:title" />
+    <meta content="shoulder" property="og:description" />
     <meta
-        content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
-        name="description" />
-    <meta content="Shop - Fitnesso Webflow Ecommerce website template" property="og:title" />
-    <meta
-        content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
-        property="og:description" />
-    <meta
-        content="https://cdn.prod.website-files.com/5e80894f63c557e083ed96b4/5e847eb601432651ddc2075e_Fitness%20Open%20Graph%20(1).png"
+        content="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises.jpg"
         property="og:image" />
-    <meta content="Shop - Fitnesso Webflow Ecommerce website template" property="twitter:title" />
+    <meta content="Shoulder - Fitnesso Webflow Ecommerce website template" property="twitter:title" />
+    <meta content="shoulder" property="twitter:description" />
     <meta
-        content="Fitensso is the best eCommerce solution for any fitness coach that wants to sell their premium packages, schedule calls or collect emails with free classes &amp; resources."
-        property="twitter:description" />
-    <meta
-        content="https://cdn.prod.website-files.com/5e80894f63c557e083ed96b4/5e847eb601432651ddc2075e_Fitness%20Open%20Graph%20(1).png"
+        content="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises.jpg"
         property="twitter:image" />
     <meta property="og:type" content="website" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="Webflow" name="generator" />
     {% load static %}
-    <link href="{% static 'shop.css' %}"
+    <link href="{% static 'shoulder.css' %}"
         rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
@@ -44,7 +38,7 @@
 </head>
 
 <body>
-    <div style="opacity:0" class="page-wrap">
+    <div class="page-wrap">
         <div data-collapse="medium" data-animation="over-right" data-duration="400" data-easing="ease"
             data-easing2="ease" role="banner" class="navbar w-nav">
             <div class="container nav-container"><a href="/" class="brand w-nav-brand"><img
@@ -62,83 +56,131 @@
                 </div>
             </div>
         </div>
-        <div class="section free-w-hero">
-            <div class="container flex-center">
-                <div class="hero-image-mask"><img
-                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash.jpg"
-                        sizes="95vw"
-                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-500.jpeg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-800.jpeg 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-2000.jpeg 2000w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash.jpg 2067w"
-                        alt="" class="hero-image" /><img
-                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c0f5_Group%20117.svg"
-                        alt="" class="free-workout-shape" /></div>
-                <div class="hero-line shop-line">
-                    <h1 class="no-margin">See Your progress here</h1>
-                </div>
-            </div>
-        </div>
-        <div class="div-block-7">
-            <div class="div-block-3">
-                <div class="div-block-4">
-                    <div class="text-block-4">Goal Weight: </div>
-                    <div class="text-block-7">{{Goal_Weight}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current Weight: </div>
-                    <div class="text-block-8">{{Current_Weight}}</div>
-                </div>
-            </div>
-            <div class="div-block-6">
-                <div class="div-block-4">
-                    <div class="text-block-4">Squat PR Goal:</div>
-                    <div class="text-block-7">{{Squat_PR_Goal}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current squat PR: </div>
-                    <div class="text-block-8">{{Current_squat_PR}}</div>
-                </div>
-            </div>
-            <div class="div-bech">
-                <div class="div-block-4">
-                    <div class="text-block-4">Bench PR goal:</div>
-                    <div class="text-block-7">{{Bench_PR_Goal}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current Bench PR: </div>
-                    <div class="text-block-8">{{Current_bench_PR}}</div>
-                </div>
-            </div>
-            <div class="div-deadlif">
-                <div class="div-block-4">
-                    <div class="text-block-4">Deadlift PR Goal: </div>
-                    <div class="text-block-7">{{Deadlift_PR_Goal}}</div>
-                </div>
-                <div class="div-block-5">
-                    <div class="text-block-6">Current Deadlift PR: </div>
-                    <div class="text-block-8">{{Current_deadlift_PR}}</div>
-                </div>
-            </div>
-        </div>
-        <div class="div-block-8">
-            <h1 class="heading-3">Workouts log:</h1>
-            <div class="div-block-16">
-                <div class="div-block-17">
-                    <div class="skibidi">muscle group: </div>
-                    <div class="skibidi">{{Muscle_group}}</div>
-                    <div class="skibidi">date: </div>
-                    <div class="skibidi">{{Date}}</div>
-                </div>
-                <div class="div-block-18">
-                    <div class="skibidi">Description: </div>
-                    <div class="skibidi">{{Description}}</div>
-                </div>
-                <div class="div-block-19">
-                    <form action="" method="post">
-                    {% csrf_token %}
-                    <input type="submit" name="prev" class="log-nav-button w-button" value="←"/>
-                    <input type="submit" name="next"
-                        class="log-nav-button w-button" value="→"/>
-                    </form>
+        <div class="section about-hero">
+            <div class="container">
+                <div class="hero-slider-content">
+                    <div class="column hero-image-column">
+                        <div class="hero-slider-image-wrap"><img
+                                src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises.jpg"
+                                loading="lazy" width="912" id="w-node-_2d4fb71b-f672-1db2-cf3a-c8c457a4767b-33f6c034"
+                                alt="" sizes="(max-width: 767px) 100vw, (max-width: 991px) 42vw, 46vw"
+                                srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises-p-500.jpg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666aef8b38df7e79cdb758bd_shoulder-exercises.jpg 629w"
+                                class="image" /></div>
                     </div>
+                    <div id="w-node-_36f7a9b8-e9f1-90f7-ef29-6b3fbc5216c5-33f6c034" class="column feature-headline">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="submit" name="prev" class="log-nav-button w-button" value="←"/>
+                            </form>
+                        <div class="div-block-2">
+                            <h1 class="heading-2">shoulder
+                            </h1>
+                            <div class="text-block-2">{{w1}}<br />{{w2}}<br />{{w3}}<br />{{w4}}<br />{{w5}}<br /></div>
+                        </div>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <input type="submit" name="next"
+                                class="log-nav-button w-button" value="→"/>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="Workout" data-w-id="b904d0c6-89dd-4436-190e-a4c6cdc8fdd1" class="section workout-content">
+            <div class="container workout-container">
+                <div id="w-node-b904d0c6-89dd-4436-190e-a4c6cdc8fdd3-33f6c034" class="warmup-wrap">
+                    <h1>Warmup</h1>
+                    <div class="text-block">Stretching<br />‍<br />Jumping jacks 30*3<br />‍<br />Crunch
+                        30*3<br />‍<br />Burpees 30*3<br />‍<br />Knee squat 20*3<br />‍<br />Push ups 10*3</div>
+                </div>
+                <div id="w-node-e153079d-53e0-b88c-1fb0-a06bbd2d1a45-33f6c034" class="back-pic-wrap"><img
+                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash.jpg"
+                        loading="lazy" width="845" id="w-node-c676158f-6792-c1a5-eac8-7bcc8026c193-33f6c034" alt=""
+                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-500.jpeg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-800.jpeg 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-1080.jpeg 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-1600.jpeg 1600w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash-p-2000.jpeg 2000w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6bfea/6666ad932711eb3d33f6c101_logan-weaver-pD5kSwtNgMc-unsplash.jpg 2067w"
+                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 60vw, 61vw" class="image" /></div>
+            </div>
+            <div class="container aditional-workout"></div>
+            <div class="w-form">
+                <form id="email-form" name="email-form" data-name="Email Form" method="get"
+                    data-wf-page-id="6666ad932711eb3d33f6c034"
+                    data-wf-element-id="66268ada-63ae-8dac-634b-32e06309e467"><select id="field" name="field"
+                        data-name="Field" class="w-condition-invisible w-select">
+                        <option value="">Select one...</option>
+                        <option value="First">First choice</option>
+                        <option value="Second">Second choice</option>
+                        <option value="Third">Third choice</option>
+                    </select></form>
+                <div class="w-form-done">
+                    <div>Thank you! Your submission has been received!</div>
+                </div>
+                <div class="w-form-fail">
+                    <div>Oops! Something went wrong while submitting the form.</div>
+                </div>
+            </div>
+        </div>
+        <div data-w-id="82132cc5-094e-04d8-bf08-ac350a8660df" class="section free-classes">
+            <div class="container free-plan-container">
+                <div class="column workouts-headline">
+                    <h2 class="jumbo max-800">More things you might like...</h2>
+                </div>
+                <div class="products-list-wrapper w-dyn-list">
+                    <div role="list" class="product-list w-dyn-items">
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/arm"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms.webp"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms-p-500.webp 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms-p-800.webp 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/666af0c57f52834128c28b1f_arms.webp 1000w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Arm</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/chest-day"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666e95448f733baeb82dd50_The-best-chest-exercises.jpg"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666e95448f733baeb82dd50_The-best-chest-exercises-p-500.jpg 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666e95448f733baeb82dd50_The-best-chest-exercises.jpg 720w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Chest Day</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                        <div role="listitem" class="product-item w-dyn-item"><a href="/plans/leg-day"
+                                class="product-card w-inline-block">
+                                <div class="product-image-wrap"><img alt=""
+                                        src="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout.webp"
+                                        sizes="(max-width: 767px) 95vw, (max-width: 991px) 30vw, 29vw"
+                                        srcset="https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-500.webp 500w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-800.webp 800w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-1080.webp 1080w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout-p-1600.webp 1600w, https://cdn.prod.website-files.com/6666ad932711eb3d33f6c050/6666eadc94387394e8cabc83_Leg-Day-Workout.webp 1988w"
+                                        class="product-image" /></div>
+                                <div class="product-description">
+                                    <div>
+                                        <div class="label _15-margin w-dyn-bind-empty"></div>
+                                        <h5>Leg Day</h5>
+                                    </div>
+                                    <div class="price-wrap">
+                                        <h6 class="scribble-text">Free</h6>
+                                    </div>
+                                    <div class="link">Train now</div>
+                                </div>
+                            </a></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div data-w-id="417cd7da-3e29-9aa3-1365-ee8b75b4dc84" class="section footer-insta">
@@ -209,8 +251,8 @@
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6666ad932711eb3d33f6bfea"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
         crossorigin="anonymous"></script>
-    {% load static %}
-    <script src="{% static 'shop.js' %}"
+        {% load static %}
+        <script src="{% static 'shoulder.js' %}"
         type="text/javascript"></script>
     <style>
         body {
