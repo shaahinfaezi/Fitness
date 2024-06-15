@@ -71,25 +71,25 @@ def chest(request):
 
     Chest_workouts=list(Workouts.find({"Muscle_Group":"Chest"}))
     
-    name1=Chest_workouts[armid]["Name1"]
+    name1=Chest_workouts[chestid]["Name1"]
 
-    name2=Chest_workouts[armid]["Name2"]
+    name2=Chest_workouts[chestid]["Name2"]
 
-    name3=Chest_workouts[armid]["Name3"]
+    name3=Chest_workouts[chestid]["Name3"]
 
-    name4=Chest_workouts[armid]["Name4"]
+    name4=Chest_workouts[chestid]["Name4"]
 
-    name5=Chest_workouts[armid]["Name5"]
+    name5=Chest_workouts[chestid]["Name5"]
 
-    sets1=Chest_workouts[armid]["Sets1"]
+    sets1=Chest_workouts[chestid]["Sets1"]
 
-    sets2=Chest_workouts[armid]["Sets2"]
+    sets2=Chest_workouts[chestid]["Sets2"]
 
-    sets3=Chest_workouts[armid]["Sets3"]
+    sets3=Chest_workouts[chestid]["Sets3"]
 
-    sets4=Chest_workouts[armid]["Sets4"]
+    sets4=Chest_workouts[chestid]["Sets4"]
 
-    sets5=Chest_workouts[armid]["Sets5"]
+    sets5=Chest_workouts[chestid]["Sets5"]
     
 
     dic={
@@ -114,25 +114,25 @@ def back(request):
 
     Back_workouts=list(Workouts.find({"Muscle_Group":"Back"}))
     
-    name1=Back_workouts[armid]["Name1"]
+    name1=Back_workouts[backid]["Name1"]
 
-    name2=Back_workouts[armid]["Name2"]
+    name2=Back_workouts[backid]["Name2"]
 
-    name3=Back_workouts[armid]["Name3"]
+    name3=Back_workouts[backid]["Name3"]
 
-    name4=Back_workouts[armid]["Name4"]
+    name4=Back_workouts[backid]["Name4"]
 
-    name5=Back_workouts[armid]["Name5"]
+    name5=Back_workouts[backid]["Name5"]
 
-    sets1=Back_workouts[armid]["Sets1"]
+    sets1=Back_workouts[backid]["Sets1"]
 
-    sets2=Back_workouts[armid]["Sets2"]
+    sets2=Back_workouts[backid]["Sets2"]
 
-    sets3=Back_workouts[armid]["Sets3"]
+    sets3=Back_workouts[backid]["Sets3"]
 
-    sets4=Back_workouts[armid]["Sets4"]
+    sets4=Back_workouts[backid]["Sets4"]
 
-    sets5=Back_workouts[armid]["Sets5"]
+    sets5=Back_workouts[backid]["Sets5"]
     
 
     dic={
@@ -157,25 +157,25 @@ def leg(request):
 
     Leg_workouts=list(Workouts.find({"Muscle_Group":"Leg"}))
     
-    name1=Leg_workouts[armid]["Name1"]
+    name1=Leg_workouts[legid]["Name1"]
 
-    name2=Leg_workouts[armid]["Name2"]
+    name2=Leg_workouts[legid]["Name2"]
 
-    name3=Leg_workouts[armid]["Name3"]
+    name3=Leg_workouts[legid]["Name3"]
 
-    name4=Leg_workouts[armid]["Name4"]
+    name4=Leg_workouts[legid]["Name4"]
 
-    name5=Leg_workouts[armid]["Name5"]
+    name5=Leg_workouts[legid]["Name5"]
 
-    sets1=Leg_workouts[armid]["Sets1"]
+    sets1=Leg_workouts[legid]["Sets1"]
 
-    sets2=Leg_workouts[armid]["Sets2"]
+    sets2=Leg_workouts[legid]["Sets2"]
 
-    sets3=Leg_workouts[armid]["Sets3"]
+    sets3=Leg_workouts[legid]["Sets3"]
 
-    sets4=Leg_workouts[armid]["Sets4"]
+    sets4=Leg_workouts[legid]["Sets4"]
 
-    sets5=Leg_workouts[armid]["Sets5"]
+    sets5=Leg_workouts[legid]["Sets5"]
     
 
     dic={
@@ -200,25 +200,25 @@ def shoulder(request):
 
     Shoulder_workouts=list(Workouts.find({"Muscle_Group":"Shoulder"}))
     
-    name1=Shoulder_workouts[armid]["Name1"]
+    name1=Shoulder_workouts[shoulderid]["Name1"]
 
-    name2=Shoulder_workouts[armid]["Name2"]
+    name2=Shoulder_workouts[shoulderid]["Name2"]
 
-    name3=Shoulder_workouts[armid]["Name3"]
+    name3=Shoulder_workouts[shoulderid]["Name3"]
 
-    name4=Shoulder_workouts[armid]["Name4"]
+    name4=Shoulder_workouts[shoulderid]["Name4"]
 
-    name5=Shoulder_workouts[armid]["Name5"]
+    name5=Shoulder_workouts[shoulderid]["Name5"]
 
-    sets1=Shoulder_workouts[armid]["Sets1"]
+    sets1=Shoulder_workouts[shoulderid]["Sets1"]
 
-    sets2=Shoulder_workouts[armid]["Sets2"]
+    sets2=Shoulder_workouts[shoulderid]["Sets2"]
 
-    sets3=Shoulder_workouts[armid]["Sets3"]
+    sets3=Shoulder_workouts[shoulderid]["Sets3"]
 
-    sets4=Shoulder_workouts[armid]["Sets4"]
+    sets4=Shoulder_workouts[shoulderid]["Sets4"]
 
-    sets5=Shoulder_workouts[armid]["Sets5"]
+    sets5=Shoulder_workouts[shoulderid]["Sets5"]
     
 
     dic={
