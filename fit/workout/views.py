@@ -339,7 +339,13 @@ def contact(request):
              "Day":Day,
              "Description":Description
              }
-        Workout_Plan.insert_one(dic)
+        
+        if Workout_Plan.count_documents({"Year":Year,"Month":Month,"Day":Day})==0:
+            Workout_Plan.insert_one(dic)
+        else:
+            cursor=Workout_Plan.find_one({"Year":Year,"Month":Month,"Day":Day})
+            idd=cursor["_id"]
+            Workout_Plan.replace_one({"_id":idd},dic)
     return render(request,"contact.html",{})
 
 
