@@ -5,6 +5,6 @@ Workout_Plan=db['Workout_collection']
 
 Stats=db['Stats_collection']
 
-Workouts=db['Workouts_collection']
+Workouts=db['Workouts']
 
 

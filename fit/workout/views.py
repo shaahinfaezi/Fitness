@@ -2,6 +2,11 @@ from django.shortcuts import render
 from .models import *
 from django.http import HttpResponse
 from bson.objectid import ObjectId
+import pickle
+from ai import track
+from itertools import chain
+import os
+from pathlib import Path
 # Create your views here.
 id_=0
 
@@ -11,22 +16,57 @@ legid=0
 shoulderid=0
 chestid=0
 
+AInum=2
+
+dirname = os.path.dirname(__file__)
+dirname=Path(dirname).parent.absolute().parent.absolute()
+trainedAi= os.path.join(dirname, 'MLP_object')
+trainedAi=trainedAi.replace('\\','/')
+
+
 def index(request):
+    print(trainedAi)
     return render(request,"index.html",{})
 def free_workouts(request):
     return render(request,"free-workouts.html",{})
 def arm(request):
     global armid
+    numArm=0
+    if Stats.count_documents({})==0:
+        numArm=Workouts.count_documents({"Muscle_Group":"Arm"})-1
+    else:
+        numArm=AInum
     if request.method == "POST":
         if request.POST.get("next"):
-            if(armid<Workouts.count_documents({"Muscle_Group":"Arm"})-1):
+            if(armid<numArm):
                 armid+=1
         elif request.POST.get("prev"):
             if armid>0:
                 armid-=1
 
+    Arm_workouts=[]
+    if Stats.count_documents({})==0:
+        Arm_workouts=list(Workouts.find({"Muscle_Group":"Arm"}))
+    else:
+        restored_mlp = pickle.load(open(trainedAi, 'rb'))
+        stats=list(Stats.find({}))
+        stats=stats[0]
+        Weight=float(stats["Current_Weight"])
+        Age=float(stats["Age"])
+        BMI=float(stats["BMI"])
+        y_pred = restored_mlp.predict([[Weight,Age,BMI]])
+        print(y_pred)   
+        intensity=int(y_pred)
+        Arm_workouts1=list(Workouts.find({"Muscle_Group":"Arm","intensity":f"{intensity}"}))
+        if intensity>2:
+            Arm_workouts2=list(Workouts.find({"Muscle_Group":"Arm","intensity":f"{intensity-1}"}))
+            Arm_workouts3=list(Workouts.find({"Muscle_Group":"Arm","intensity":f"{intensity-2}"}))
+        else:
+            Arm_workouts2=list(Workouts.find({"Muscle_Group":"Arm","intensity":f"{intensity+1}"}))
+            Arm_workouts3=list(Workouts.find({"Muscle_Group":"Arm","intensity":f"{intensity+2}"}))
+        Arm_workouts=list(chain(Arm_workouts1,Arm_workouts2,Arm_workouts3))
 
-    Arm_workouts=list(Workouts.find({"Muscle_Group":"Arm"}))
+
     
     name1=Arm_workouts[armid]["Name1"]
 
@@ -60,16 +100,41 @@ def arm(request):
     return render(request,"arm.html",dic)
 def chest(request):
     global chestid
+    numChest=0
+    if Stats.count_documents({})==0:
+        numChest=Workouts.count_documents({trainedAi:"Chest"})-1
+    else:
+        numChest=AInum
     if request.method == "POST":
         if request.POST.get("next"):
-            if(chestid<Workouts.count_documents({"Muscle_Group":"Chest"})-1):
+            if(chestid<numChest):
                 chestid+=1
         elif request.POST.get("prev"):
             if chestid>0:
                 chestid-=1
 
 
-    Chest_workouts=list(Workouts.find({"Muscle_Group":"Chest"}))
+    Chest_workouts=[]
+    if Stats.count_documents({})==0:
+        Chest_workouts=list(Workouts.find({"Muscle_Group":" Chest"}))
+    else:
+        restored_mlp = pickle.load(open(trainedAi, 'rb'))
+        stats=list(Stats.find({}))
+        stats=stats[0]
+        Weight=float(stats["Current_Weight"])
+        Age=float(stats["Age"])
+        BMI=float(stats["BMI"])
+        y_pred = restored_mlp.predict([[Weight,Age,BMI]])
+        print(y_pred)   
+        intensity=int(y_pred)
+        Chest_workouts1=list(Workouts.find({"Muscle_Group":"Chest","intensity":f"{intensity}"}))
+        if intensity>2:
+            Chest_workouts2=list(Workouts.find({"Muscle_Group":"Chest","intensity":f"{intensity-1}"}))
+            Chest_workouts3=list(Workouts.find({"Muscle_Group":"Chest","intensity":f"{intensity-2}"}))
+        else:
+            Chest_workouts2=list(Workouts.find({"Muscle_Group":"Chest","intensity":f"{intensity+1}"}))
+            Chest_workouts3=list(Workouts.find({"Muscle_Group":"Chest","intensity":f"{intensity+2}"}))
+        Chest_workouts=list(chain(Chest_workouts1,Chest_workouts2,Chest_workouts3))
     
     name1=Chest_workouts[chestid]["Name1"]
 
@@ -103,16 +168,41 @@ def chest(request):
     return render(request,"chest.html",dic)
 def back(request):
     global backid
+    numBack=0
+    if Stats.count_documents({})==0:
+        numBack=Workouts.count_documents({"Muscle_Group":"Back"})-1
+    else:
+        numBack=AInum
     if request.method == "POST":
         if request.POST.get("next"):
-            if(backid<Workouts.count_documents({"Muscle_Group":"Back"})-1):
+            if(backid<numBack):
                 backid+=1
         elif request.POST.get("prev"):
             if backid>0:
                 backid-=1
 
 
-    Back_workouts=list(Workouts.find({"Muscle_Group":"Back"}))
+    Back_workouts=[]
+    if Stats.count_documents({})==0:
+        Back_workouts=list(Workouts.find({"Muscle_Group":"Back"}))
+    else:
+        restored_mlp = pickle.load(open(trainedAi, 'rb'))
+        stats=list(Stats.find({}))
+        stats=stats[0]
+        Weight=float(stats["Current_Weight"])
+        Age=float(stats["Age"])
+        BMI=float(stats["BMI"])
+        y_pred = restored_mlp.predict([[Weight,Age,BMI]])
+        print(y_pred)   
+        intensity=int(y_pred)
+        Back_workouts1=list(Workouts.find({"Muscle_Group":"Back","intensity":f"{intensity}"}))
+        if intensity>2:
+            Back_workouts2=list(Workouts.find({"Muscle_Group":"Back","intensity":f"{intensity-1}"}))
+            Back_workouts3=list(Workouts.find({"Muscle_Group":"Back","intensity":f"{intensity-2}"}))
+        else:
+            Back_workouts2=list(Workouts.find({"Muscle_Group":"Back","intensity":f"{intensity+1}"}))
+            Back_workouts3=list(Workouts.find({"Muscle_Group":"Back","intensity":f"{intensity+2}"}))
+        Back_workouts=list(chain(Back_workouts1,Back_workouts2,Back_workouts3))
     
     name1=Back_workouts[backid]["Name1"]
 
@@ -146,16 +236,41 @@ def back(request):
     return render(request,"back.html",dic)
 def leg(request):
     global legid
+    numLeg=0
+    if Stats.count_documents({})==0:
+        numLeg=Workouts.count_documents({"Muscle_Group":"Leg"})-1
+    else:
+        numLeg=AInum
     if request.method == "POST":
         if request.POST.get("next"):
-            if(legid<Workouts.count_documents({"Muscle_Group":"Leg"})-1):
+            if(legid<numLeg):
                 legid+=1
         elif request.POST.get("prev"):
             if legid>0:
                 legid-=1
 
 
-    Leg_workouts=list(Workouts.find({"Muscle_Group":"Leg"}))
+    Leg_workouts=[]
+    if Stats.count_documents({})==0:
+        Leg_workouts=list(Workouts.find({"Muscle_Group":"Leg"}))
+    else:
+        restored_mlp = pickle.load(open(trainedAi, 'rb'))
+        stats=list(Stats.find({}))
+        stats=stats[0]
+        Weight=float(stats["Current_Weight"])
+        Age=float(stats["Age"])
+        BMI=float(stats["BMI"])
+        y_pred = restored_mlp.predict([[Weight,Age,BMI]])
+        print(y_pred)   
+        intensity=int(y_pred)
+        Leg_workouts1=list(Workouts.find({"Muscle_Group":"Leg","intensity":f"{intensity}"}))
+        if intensity>2:
+            Leg_workouts2=list(Workouts.find({"Muscle_Group":"Leg","intensity":f"{intensity-1}"}))
+            Leg_workouts3=list(Workouts.find({"Muscle_Group":"Leg","intensity":f"{intensity-2}"}))
+        else:
+            Leg_workouts2=list(Workouts.find({"Muscle_Group":"Leg","intensity":f"{intensity+1}"}))
+            Leg_workouts3=list(Workouts.find({"Muscle_Group":"Leg","intensity":f"{intensity+2}"}))
+        Leg_workouts=list(chain(Leg_workouts1,Leg_workouts2,Leg_workouts3))
     
     name1=Leg_workouts[legid]["Name1"]
 
@@ -189,16 +304,41 @@ def leg(request):
     return render(request,"leg.html",dic)
 def shoulder(request):
     global shoulderid
+    numShoulder=0
+    if Stats.count_documents({})==0:
+        numShoulder=Workouts.count_documents({"Muscle_Group":"Shoulder"})-1
+    else:
+        numShoulder=AInum
     if request.method == "POST":
         if request.POST.get("next"):
-            if(shoulderid<Workouts.count_documents({"Muscle_Group":"Shoulder"})-1):
+            if(shoulderid<numShoulder):
                 shoulderid+=1
         elif request.POST.get("prev"):
             if shoulderid>0:
                 shoulderid-=1
 
 
-    Shoulder_workouts=list(Workouts.find({"Muscle_Group":"Shoulder"}))
+    Shoulder_workouts=[]
+    if Stats.count_documents({})==0:
+        Shoulder_workouts=list(Workouts.find({"Muscle_Group":"Shoulder"}))
+    else:
+        restored_mlp = pickle.load(open(trainedAi, 'rb'))
+        stats=list(Stats.find({}))
+        stats=stats[0]
+        Weight=float(stats["Current_Weight"])
+        Age=float(stats["Age"])
+        BMI=float(stats["BMI"])
+        y_pred = restored_mlp.predict([[Weight,Age,BMI]])
+        print(y_pred)   
+        intensity=int(y_pred)
+        Shoulder_workouts1=list(Workouts.find({"Muscle_Group":"Shoulder","intensity":f"{intensity}"}))
+        if intensity>2:
+            Shoulder_workouts2=list(Workouts.find({"Muscle_Group":"Shoulder","intensity":f"{intensity-1}"}))
+            Shoulder_workouts3=list(Workouts.find({"Muscle_Group":"Shoulder","intensity":f"{intensity-2}"}))
+        else:
+            Shoulder_workouts2=list(Workouts.find({"Muscle_Group":"Shoulder","intensity":f"{intensity+1}"}))
+            Shoulder_workouts3=list(Workouts.find({"Muscle_Group":"Shoulder","intensity":f"{intensity+2}"}))
+        Shoulder_workouts=list(chain(Shoulder_workouts1,Shoulder_workouts2,Shoulder_workouts3))
     
     name1=Shoulder_workouts[shoulderid]["Name1"]
 
@@ -299,7 +439,7 @@ def blog(request):
         Age=request.POST.get("name")
         Current_Weight=request.POST.get("Current_Weight")
         Goal_Weight=request.POST.get("Goal_Weight")
-        Height=request.POST.get("Height")
+        bmi=request.POST.get("BMI")
         Current_bench_PR=request.POST.get("Current_bench_PR")
         Bench_PR_Goal=request.POST.get("Bench_PR_Goal")
         Current_squat_PR=request.POST.get("Current_squat_PR")
@@ -309,7 +449,7 @@ def blog(request):
         dic={"Age":Age,
              "Current_Weight":Current_Weight,
              "Goal_Weight":Goal_Weight,
-             "Height":Height,
+             "BMI":bmi,
              "Current_bench_PR":Current_bench_PR,
              "Bench_PR_Goal":Bench_PR_Goal,
              "Current_squat_PR":Current_squat_PR,
