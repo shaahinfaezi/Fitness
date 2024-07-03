@@ -55,7 +55,12 @@ def arm(request):
         Age=float(stats["Age"])
         BMI=float(stats["BMI"])
         y_pred = restored_mlp.predict([[Weight,Age,BMI]])
-        print(y_pred)   
+         
+        if y_pred<1:
+            y_pred=1
+        if y_pred>10:
+            y_pred=10
+        print(y_pred)  
         intensity=int(y_pred)
         Arm_workouts1=list(Workouts.find({"Muscle_Group":"Arm","intensity":f"{intensity}"}))
         if intensity>2:
@@ -126,6 +131,10 @@ def chest(request):
         BMI=float(stats["BMI"])
         y_pred = restored_mlp.predict([[Weight,Age,BMI]])
         print(y_pred)   
+        if y_pred<1:
+            y_pred=1
+        if y_pred>10:
+            y_pred=10
         intensity=int(y_pred)
         Chest_workouts1=list(Workouts.find({"Muscle_Group":"Chest","intensity":f"{intensity}"}))
         if intensity>2:
@@ -194,6 +203,10 @@ def back(request):
         BMI=float(stats["BMI"])
         y_pred = restored_mlp.predict([[Weight,Age,BMI]])
         print(y_pred)   
+        if y_pred<1:
+            y_pred=1
+        if y_pred>10:
+            y_pred=10
         intensity=int(y_pred)
         Back_workouts1=list(Workouts.find({"Muscle_Group":"Back","intensity":f"{intensity}"}))
         if intensity>2:
@@ -261,7 +274,11 @@ def leg(request):
         Age=float(stats["Age"])
         BMI=float(stats["BMI"])
         y_pred = restored_mlp.predict([[Weight,Age,BMI]])
-        print(y_pred)   
+        print(y_pred)  
+        if y_pred<1:
+            y_pred=1
+        if y_pred>10:
+            y_pred=10 
         intensity=int(y_pred)
         Leg_workouts1=list(Workouts.find({"Muscle_Group":"Leg","intensity":f"{intensity}"}))
         if intensity>2:
@@ -330,6 +347,11 @@ def shoulder(request):
         BMI=float(stats["BMI"])
         y_pred = restored_mlp.predict([[Weight,Age,BMI]])
         print(y_pred)   
+
+        if y_pred<1:
+            y_pred=1
+        if y_pred>10:
+            y_pred=10
         intensity=int(y_pred)
         Shoulder_workouts1=list(Workouts.find({"Muscle_Group":"Shoulder","intensity":f"{intensity}"}))
         if intensity>2:
