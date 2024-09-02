@@ -1,4 +1,8 @@
 
+
+https://github.com/user-attachments/assets/5a2f88fc-2535-4929-ad9e-11c37291b242
+
+
 # Fitness Tracker Web Application
 **Features**
 - **Fitness Goal Tracking**: This web application is a comprehensive fitness tracker designed to help users monitor their fitness goals.
