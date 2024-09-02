@@ -1,6 +1,7 @@
 
 
-https://github.com/user-attachments/assets/5a2f88fc-2535-4929-ad9e-11c37291b242
+https://github.com/user-attachments/assets/1e59ab30-d92b-44d6-9918-4731ea8456c7
+
 
 
 # Fitness Tracker Web Application
@@ -9,3 +10,6 @@ https://github.com/user-attachments/assets/5a2f88fc-2535-4929-ad9e-11c37291b242
 * **Workout Logging**: Log your workouts to track your exercise routine. 
 + **Personalized AI Workout Plans**: In addition to tracking progress, the application leverages a machine learning model, specifically an MLP (Multi-Layer Perceptron) Regressor, to predict an individual's strength level based on their age, weight, and BMI.
  Based on these predictions, the app provides personalized workout plans tailored to each muscle group, ensuring users receive exercise recommendations that align with their current fitness level.
+
+
+
